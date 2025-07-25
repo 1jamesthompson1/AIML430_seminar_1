@@ -17,10 +17,10 @@ Team members:
 
 Insturctions copied from the website: https://ecs.wgtn.ac.nz/Courses/AIML430_2025T2/Seminar1
 
-    - Your group will produce a summary of an assigned paper (3% group mark). You will have the option to submit your own individual summary if you face group work difficulties --- though this will greatly increase your own workload! No student has chosen this option since the course started...
-    - The summary should be ~2 pages longer (no more than 4!). You are encouraged (and expected) to include your own takeaways/thoughts. It will be given to your classmates before your seminar as reading material.
-    - Your group will then facilitate a seminar on your assigned paper. You will start with a short presentation (max 10 mins, 1%, individual mark) and then take turns facilitating discussion on a question asked by (preferably) your classmates or the lecturers (1%, individual mark).
-    - You will have the opportunity to form your own group. Those who do not have a group by the registration deadline will be assigned one by the lecturer. 
+> - Your group will produce a summary of an assigned paper (3% group mark). You will have the option to submit your own individual summary if you face group work difficulties --- though this will greatly increase your own workload! No student has chosen this option since the course started...
+> - The summary should be ~2 pages longer (no more than 4!). You are encouraged (and expected) to include your own takeaways/thoughts. It will be given to your classmates before your seminar as reading material.
+> - Your group will then facilitate a seminar on your assigned paper. You will start with a short presentation (max 10 mins, 1%, individual mark) and then take turns facilitating discussion on a question asked by (preferably) your classmates or the lecturers (1%, individual mark).
+> - You will have the opportunity to form your own group. Those who do not have a group by the registration deadline will be assigned one by the lecturer. 
 
 
 ## Contributers
