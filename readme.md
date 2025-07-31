@@ -44,3 +44,10 @@ latexmk -c --output-directory=output
 
 It will build both documents with the dependencies.
 
+### Adding referecnes
+
+To add referecnes add the bibtex entry directly into the references.bib file. Then you can use the usual `\cite{...}` command.
+
+### Pushing to main
+
+You should push to main regularly and reoslve merge conflicts immeditately. This will help us to stay as synced as possible. Whenever you make it to some 'point' be it first draft or what have you then commit and push.
