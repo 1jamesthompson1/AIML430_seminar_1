@@ -13,6 +13,11 @@
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amssymb} 
+
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -44,18 +49,21 @@ While AI has transformed industries such as healthcare and finance, its potentia
 We will explore four key areas: \textbf{Results}, \textbf{Discussion}, \textbf{Methods}, and \textbf{Takeaways \& Reflections}. The study focuses on medium-sized offices, and the results can be extrapolated to offices of any size.
 \end{frame}
 
-\begin{frame}{Results part 1}
-\framesubtitle{Presented by: Dwayne Mark Acosta}
-
-\end{frame}
-This paper \cite{dingPotentialArtificialIntelligence2024} \dots
-
 \section*{AI's impact on energy and emission reductions}
 \textit{Summary by Dwayne Mark Acosta}
 
-% Talking about a cool figure \ref{fig:cool-figure}. What a cool figure it is!
-% \cfigure{cool-figure}{Different energy use scenarios.}
-% David- I added this figure to the next section since this corresponds to the paper
+According to the 2012 U.S. Energy Information Association (EIA) survey, office buildings have the highest energy consumption among commercial types (20\%), with a median energy use intensity (EUI) of 167~kWh/m\textsuperscript{2} (EUI\textsubscript{base}). In contrast, 67 verified low-energy office buildings reported a median EUI of 57~kWh/m\textsuperscript{2} (EUI\textsubscript{HEEB}). The difference between the baseline and best practice energy performance yields a technical energy efficiency saving (TEES) of 110~kWh/m\textsuperscript{2}. TEES can be improved in four categories: equipment, occupancy influence, control and operation, and design and construction.
+
+This study focuses on medium office buildings, which comprise 70\% of total office energy use. The Department of Energy's (DOE) EnergyPlus tool, defined by ASHRAE Standard 90.1, was used to simulate the annual building energy consumption of medium office buildings across four climate zones using representative U.S. cities. Both electricity and natural gas use were considered, with gas assumed to supply hot water and heating. 
+
+To estimate the TEES, a set of 23 improvement cases was developed by varying key design parameters. These include 8 cases for equipment efficiency, 9 for design and construction, and 6 for occupancy-related behavior and control. The cases, based on conservative assumptions, are summarized in Table~\ref{tab:all-cases}, and their contributions to total annual energy savings across different climate zones are illustrated in Figure~\ref{fig:category-breakdown}. The results represent the maximum technical potential achievable through simulation, achieving these savings in practice may require substantial effort throughout the building lifecycle. AI technologies such as fault detection, smart sensors, robotic construction and others can help automate and streamline this process at lower cost and reduced labor.
+
+\textit{Key Takeaway/Thoughts:} Although simulation results suggest that TEES across the four categories can range from 6\% to 27\%, the paper assumes highly optimized performance which requires significant time, resources, and coordination across the building lifecycle. This idealized level of optimization is often difficult to achieve in practice due to real-world constraints. While AI tools may support these optimizations, their practical effectiveness is not guaranteed and remains highly dependent on a wide range of factors including data quality, user adoption, and integration with current systems.
+
+
+
+\section*{AI's impact on energy and emission reductions}
+\textit{Summary by Dwayne Mark Acosta}
 
 \section*{AI's reduces emissions of buildings}
 \textit{Summary by David Franz}
@@ -130,5 +138,68 @@ The paper examines various scenarios with some amount of estimation for unknowns
 \appendix
 
 
+    
+      \begin{table}[h]
+        \centering
+        \caption{Summary of Energy Efficiency Improvement Cases Across All Categories}
+        \label{tab:all-cases}
+        \begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+        \hline
+        \textbf{Case} & \textbf{Improvements} & \textbf{Adjustments} \\
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Equipment Efficiency Improvements}} \\
+        \hline
+        E1 & HVAC – Cooling & +20\% \\
+        E2 & HVAC – Heating & +12\% \\
+        E3 & HVAC – Cases E1 and E2 & +20\%, +12\% \\
+        E4 & Lighting – Power density (LPD) & -15\% \\
+        E5 & Lighting – Power density (LPD) & -21\% \\
+        E6 & Equipment – Power density (EPD) & -10\% \\
+        E7 & Equipment – Power density (EPD) & -20\% \\
+        E8 & Combined – Cases E1–E7 & \\
+        E9 & Case E8 + Heat Pump for space heating & \\
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Design and Construction Improvements}} \\
+        \hline
+        D1 & Orientation & East (90° rotation) \\
+        D2 & Orientation & South (180° rotation) \\
+        D3 & Orientation & West (270° rotation) \\
+        D4 & Envelope (walls, slabs, roofs, windows) & High insulation \\
+        D5 & Envelope (walls, slabs, roofs, windows) & Increased infiltration (~60\%) \\
+        D6 & Window-to-wall ratio (WWR) & Variation 1 \\
+        D7 & Window-to-wall ratio (WWR) & Variation 2 \\
+        D8 & Window-to-wall ratio (WWR) & Variation 3 \\
+        D9 & Combined – Orientation, insulation, WWR & \\
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Occupant Behavior and Control Improvements}} \\
+        \hline
+        B1 & Ventilation control & Open/close windows \\
+        B2 & Lighting use & Switch on/off lights \\
+        B3 & Electricity consumption & Turn off plug loads \\
+        B4 & Lighting use & Dim lights \\
+        B5 & HVAC & Turn on/off HVAC systems \\
+        B6 & Thermostat & Adjust thermostat settings \\
+        \hline
+        \multicolumn{3}{|c|}{
+          \begin{tabular}[c]{@{}c@{}}
+            \textbf{Energy savings:} \\
+            Equipment = 11.5--17.3\% \\
+            Design and Construction = 5.9--9.1\% \\
+            Occupant Behavior and Control and Operation = 15--20\%
+          \end{tabular}
+        } \\
+        \hline
+        \end{tabularx}
+        \end{table}
+
+        
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figures/Integrated technical building energy-saving potential of a typical medium office building in the United States.png}
+  \caption{Integrated building energy-saving breakdown by category and climate zone.}
+  \label{fig:category-breakdown}
+\end{figure}
+
+  
 
 \end{document}
