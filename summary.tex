@@ -34,32 +34,32 @@
 }
 \title{Summary of Potential of artificial intelligence in reducing energy and carbon emissions of commercial buildings at scale}
 
-\author{Dwayne Mark (Dwayne) Acosta \\ Mohamed Amine (Mohamed) Benaziza \\ David Franz \\ Ray Marange \\ James Thompson\\
+\author{Dwayne Mark Acosta (300665276) \\ Mohamed Amine Benaziza (300684553) \\ David Franz (add student id here) \\ Ray Marange (300671115) \\ James Thompson (300680096)\\
 \textit{Victoria University of Wellington}\\}
 \date{\today}
 
 \maketitle
 
 \section*{Introduction}
-\textit{Summary by Ray Marange}
 Climate change is accelerating, and buildings are a major contributor, responsible for 39\% of U.S. primary energy use. With urbanization surging and building stock/demand expected to double by 2060, improving building efficiency is no longer optional but urgent.
 While AI has transformed industries such as healthcare and finance, its potential in building energy efficiency remains underexplored. AI demonstrates significant potential to reduce costs, enhance benefits, and improve safety across the building lifecycle. This study \cite{dingPotentialArtificialIntelligence2024} investigates how AI can reduce energy consumption and carbon emissions in medium-sized office buildings, offering a scalable framework that could be applied globally.
 We will explore four key areas: \textbf{Results}, \textbf{Discussion}, \textbf{Methods}, and \textbf{Takeaways \& Reflections}. The study focuses on medium-sized offices, and the results can be extrapolated to offices of any size.
 
 
 \section*{AI's impact on energy and emission reductions}
-\textit{Summary by Dwayne Mark Acosta}
 
-According to the 2012 U.S. Energy Information Association (EIA) survey, office buildings have the highest energy consumption among commercial types (20\%), with a median energy use intensity (EUI) of 167~kWh/m\textsuperscript{2} (EUI\textsubscript{base}). In contrast, 67 verified low-energy office buildings reported a median EUI of 57~kWh/m\textsuperscript{2} (EUI\textsubscript{HEEB}). The difference between the baseline and best practice energy performance yields a technical energy efficiency saving (TEES) of 110~kWh/m\textsuperscript{2}. TEES can be improved in four categories: equipment, occupancy influence, control and operation, and design and construction.
+According to the 2012 U.S. Energy Information Association (EIA) survey \cite{USEIACommercial}, office buildings have the highest energy consumption among commercial types (20\%), with a median energy use intensity (EUI) of 167~kWh/m\textsuperscript{2} (EUI\textsubscript{base}). In contrast, 67 verified low-energy office buildings reported a median EUI of 57~kWh/m\textsuperscript{2} (EUI\textsubscript{HEEB}). The difference between the baseline and best practice energy performance yields a technical energy efficiency saving (TEES) of 110~kWh/m\textsuperscript{2}. TEES can be improved in four categories: equipment, occupancy influence, control and operation, and design and construction.
 
-This study focuses on medium office buildings, which comprise 70\% of total office energy use. The Department of Energy's (DOE) EnergyPlus tool, defined by ASHRAE Standard 90.1, was used to simulate the annual building energy consumption of medium office buildings across four climate zones (1A, 3B, 4A, 5A) using representative U.S. cities. Both electricity and natural gas use were considered, with gas assumed to supply hot water and heating. 
+This study focuses on medium office buildings, which comprise 70\% of total office energy use. The Department of Energy's (DOE) EnergyPlus tool, defined by ASHRAE Standard 90.1 \cite{ASHRAEANSIASHRAE}, was used to simulate the annual building energy consumption of medium office buildings across four climate zones (1A, 3B, 4A, 5A) using representative U.S. cities. Both electricity and natural gas use were considered, with gas assumed to supply hot water and heating. 
 
 To estimate the TEES, a set of 24 improvement cases was developed by varying key design parameters. These include 9 cases for equipment efficiency, 9 for design and construction, and 6 for occupancy-related behavior and control. The cases, based on conservative assumptions, are summarized in Table~\ref{tab:all-cases}, and their contributions to total annual energy savings across different climate zones are illustrated in Figure~\ref{fig:category-breakdown}. The results represent the maximum technical potential achievable through simulation, achieving these savings in practice may require substantial effort throughout the building lifecycle. AI technologies such as fault detection, smart sensors, robotic construction and others can help automate and streamline this process at lower cost and reduced labor.
 
-\textit{Key Takeaway/Thoughts:} Although simulation results suggest that TEES across the four categories can range from 6\% to 27\%, the paper assumes highly optimized performance which is often difficult to achieve in practice due to real-world constraints. While AI technologies may support these optimizations, their effectiveness is not guaranteed and remains highly dependent on a wide range of factors including data quality, user adoption, and integration with current systems.
+\subsection*{Thoughts and takeaways}
+Although simulation results suggest that TEES across the four categories can range from 6\% to 27\%, the paper assumes highly optimized performance which is often difficult to achieve in practice due to real-world constraints. While AI technologies may support these optimizations, their effectiveness is not guaranteed and remains highly dependent on a wide range of factors including data quality, user adoption, and integration with current systems.
 
 \section*{AI's reduces emissions of buildings}
-\textit{Summary by David Franz}
+
+% Just a short paragraph summarizing what this modelling is about. I.e modellign the energy use and emission of the building stock.
 
 \subsection*{Primary focus of modeling}
 
@@ -108,44 +108,34 @@ Table \ref{tab:energy-emissions} shows the energy use and CO$_2$ emissions for d
 
 The paper asserts that using AI in the ways that they propose always leads to a higher market share of efficient buildings. 
 
-
-\subsection*{Thoughts on result}
+\subsection*{Thoughts and takeaways}
 The paper examines various scenarios with some amount of estimation for unknowns, so each individual simulation is unlikely to be exactly right. However, the fact that all scenarios trend in a downward direction for energy use and $CO_2$ emissions suggest it is highly likely that AI would have some impact on building emissions, but the current lack of data leading to necessary estimation means that the current degree of this impact is still unclear.
 
 
 \section*{Discussion}
-\textit{Summary by Mohamed Amine Benaziza}
 
-\subsection*{Method and Scope}
 The study uses a combination of engineering and energy-simulation approaches, rather than focusing on a single AI technology, to estimate how AI can boost building energy efficiency and reduce carbon emissions. While the analysis centers on a medium-sized office building, the methodology is adaptable to other commercial building types with appropriate adjustments.
 
-\subsection*{Why AI Helps}
 AI enables data-driven modeling, which can tailor solutions to specific buildings and lower costs. This accelerates the adoption of high-efficiency and net-zero-energy buildings (HEEBs and NZEBs). The paper also notes that advanced control models, such as deep learning and reinforcement learning, could further improve accuracy in future work.
 
-\subsection*{Key Analytical Structure}
-The paper evaluates the theoretical maximum savings achievable over a building’s lifetime. It highlights that different climate zones offer varying saving potentials, but in all cases, AI can help buildings achieve these potentials at lower costs.
-
-\subsection*{Quantified Impacts (US Medium Offices)}
+The paper evaluates the theoretical maximum savings achievable over a building’s lifetime. It highlights that different climate zones offer varying saving potentials, but in all cases, AI can help buildings achieve these potentials at lower costs. They have quantified these numbers for the medium office building example.
 \begin{itemize}
     \item By 2050, AI adoption alone is projected to reduce energy use and CO$_2$ emissions by approximately 8\% compared to the “business as usual” (BAU) scenario.
     \item When compared to a policy-only scenario, AI provides an additional 19\% in savings.
     \item The combination of AI, strong efficiency policies, and low-emission power generation (LEPG) could result in up to 40\% less energy use and 90\% less CO$_2$ emissions than BAU.
 \end{itemize}
 
-\subsection*{Limitations and Future Work}
-The results depend on assumptions about cost declines and adoption rates. Additionally, the methodology has not yet been tested on other building types, which may limit the generalizability of the findings.
-
-\subsection*{Take-aways and Thoughts}
+\subsection*{Thoughts and takeaways}
 \begin{enumerate}
+    \item \textbf{Limitations:} The results depend on assumptions about cost declines and adoption rates. Additionally, the methodology has not yet been tested on other building types, which may limit the generalizability of the findings.
     \item \textbf{Paper’s Goal:} The main contribution is not a new algorithm, but rather the demonstration that AI can make existing high-efficiency designs more affordable, thereby unlocking a larger market share for these technologies.
     \item \textbf{Role of Policy:} On its own, AI delivers modest (single-digit) gains. The substantial reductions of 40\% in energy use and 90\% in CO$_2$ emissions are only achieved when AI is combined with LEPG and clear regulatory policies.
     \item \textbf{Scalability:} Expanding these results to other sectors will require further investigation and the development of skilled facility management teams.
 \end{enumerate}
 
 \section*{Methods}
-\textit{Summary by James Thompson}
 
-This paper makes a few claims around the potential energy use reduction that can happen now and as different future scenarios play out. For them to calculate the potential savings you need models and numbers to put in the models. I feel that in this study they have used simple models and come up with some numbers without adequately backing them up. Therefore I feel that their conclusions are not as strong as they could be, and future forecasted graphs feel like they could of just been drawn by hand \footnote{I think that Thane Ruthenis (prominent commentator of AI forums) comment says it best \cite{ruthenisDeepCritiqueAI2025}}.
+This paper makes a few claims around the potential energy use reduction that can happen now and as different future scenarios play out. For them to calculate the potential savings you need models and numbers to put in the models.
 
 \subsection*{Energy saving potentials}
 
@@ -160,6 +150,10 @@ The last model is used to calculate the cost of the differnet buildings. Specifc
 The cost premium of NZEB buildings over regualr buildings is 13-19\% when looking at the four climate zones with HEEB buildings being about 5\% cheaper than NZEB. These figures are estimated from construction cost data. The amount the premium will decrease autonomously and due to AI seem to have no baseing. Furthermore AI is simply assumed to decrease the cost premium by an extra 10\% overall without any justification.
 
 The last part to the model of the market share is availability, while not stating explcitly how it is done the availability is a combination of retrofiting old buildings and maximum amount allowed in the market. The NZEB buildings have a market share cp of 59\%-79\% depending on the scneario. With an estimated annual retrofit of 0.5\%-3.5\% depending on scenario. These values have been estiamted by the author with some being adpated from previous studies. In this they assume AI can increase the maximum share by 2\%.
+
+\subsection*{Thoughts and takeaways}
+In this study they have used simple reasonable models which makes their method accessible. However the models are senestive to the parameters you choose to use and in this case many of their parameter choices are lacking adequate support. As a consequence their conclusions are not as strong as they could be, and future forecasted numbers are ideals not rigorus predictions. \footnote{Thane Ruthenis (prominent commentator of AI forums) comment says it best \cite{ruthenisDeepCritiqueAI2025}}. These model are a good framework but more forecasting work is needed to understand the future effect of AI and provide more supported parameters to the models.
+
 
 \begin{align}
   \text{share}_{i,t} &= \frac{a_{i,t}\exp{(u_{i,t})}}{\sum_{i=0}^{N-1}a_{i,t}\exp{(u_{i,t})}}\label{eq:share} \\
