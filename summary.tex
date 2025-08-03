@@ -145,6 +145,27 @@ The results depend on assumptions about cost declines and adoption rates. Additi
 \section*{Methods}
 \textit{Summary by James Thompson}
 
+This paper makes a few claims around the potential energy use reduction that can happen now and as different future scenarios play out. For them to calculate the potential savings you need models and numbers to put in the models. I feel that in this study they have used simple models and come up with some numbers without adequately backing them up. Therefore I feel that their conclusions are not as strong as they could be, and future forecasted graphs feel like they could of just been drawn by hand \footnote{I think that Thane Ruthenis (prominent commentator of AI forums) comment says it best \cite{ruthenisDeepCritiqueAI2025}}.
+
+\subsection*{Energy saving potentials}
+
+The first model they use is particularly simple which is the just the summation of the potential saving across the four areas of the building mutiplied by the base energy use. The values of potential savings are calculated using the building simulations and other literature. This is the strongest and most reliable model they use.
+
+\subsection*{Market share of HEEB and NZEB in the future}
+
+The next models they use are for studying how different scenarios will play out. The first model is a discrete choice model that calculates what share of a population will take a particular choice . The share is calculated as simply a ratio of its availabiltiy and utilty and the sum of other choices availability and utilty E \ref{eq:share}. The utility of each type of building is calculated by using a future discounted sum of the net benefit at each time Eq \ref{eq:utility}.
+
+The last model is used to calculate the cost of the differnet buildings. Specifcally high energy efficient buildings (HEEB) and net zero energy buildings (NZEB). Having a look at Eq \ref{eq:cost} there are three things parameters they have set. Firstly is how much more epxensive NZEB are then HEEB buildings. Secondly is how quickly this premium will decrease autonomosly and due to policy. Lastly is how much AI will decrease the premium.
+
+The cost premium of NZEB buildings over regualr buildings is 13-19\% when looking at the four climate zones with HEEB buildings being about 5\% cheaper than NZEB. These figures are estimated from construction cost data. The amount the premium will decrease autonomously and due to AI seem to have no baseing. Furthermore AI is simply assumed to decrease the cost premium by an extra 10\% overall without any justification.
+
+The last part to the model of the market share is availability, while not stating explcitly how it is done the availability is a combination of retrofiting old buildings and maximum amount allowed in the market. The NZEB buildings have a market share cp of 59\%-79\% depending on the scneario. With an estimated annual retrofit of 0.5\%-3.5\% depending on scenario. These values have been estiamted by the author with some being adpated from previous studies. In this they assume AI can increase the maximum share by 2\%.
+
+\begin{align}
+  \text{share}_{i,t} &= \frac{a_{i,t}\exp{(u_{i,t})}}{\sum_{i=0}^{N-1}a_{i,t}\exp{(u_{i,t})}}\label{eq:share} \\
+  u_{i,t} &= \sum_{t}^{\text{max}_t}d_t(B_{i,t}-C_{i,t}) \label{eq:utility}\\
+  C_{i,t} &= CC_0+ \nabla CC_k\times(1-\alpha_{k,t}-\xi_{k,t}) +\nonumber\\& DC_0+\nabla DC_k+(1-\beta_{k,t}-\zeta_{k,t}) \label{eq:cost}
+\end{align}
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
@@ -153,58 +174,58 @@ The results depend on assumptions about cost declines and adoption rates. Additi
 
 
     
-      \begin{table}[h]
-        \centering
-        \caption{Summary of Energy Efficiency Improvement Cases Across All Categories}
-        \label{tab:all-cases}
-        \begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
-        \hline
-        \textbf{Case} & \textbf{Improvements} & \textbf{Adjustments} \\
-        \hline
-        \multicolumn{3}{|c|}{\textbf{Equipment Efficiency Improvements}} \\
-        \hline
-        E1 & HVAC – Cooling & +20\% \\
-        E2 & HVAC – Heating & +12\% \\
-        E3 & HVAC – Cases E1 and E2 & +20\%, +12\% \\
-        E4 & Lighting – Power density (LPD) & -15\% \\
-        E5 & Lighting – Power density (LPD) & -21\% \\
-        E6 & Equipment – Power density (EPD) & -10\% \\
-        E7 & Equipment – Power density (EPD) & -20\% \\
-        E8 & Combined – Cases E1–E7 & \\
-        E9 & Case E8 + Heat Pump for space heating & \\
-        \hline
-        \multicolumn{3}{|c|}{\textbf{Design and Construction Improvements}} \\
-        \hline
-        D1 & Orientation & East (90° rotation) \\
-        D2 & Orientation & South (180° rotation) \\
-        D3 & Orientation & West (270° rotation) \\
-        D4 & Envelope (walls, slabs, roofs, windows) & High insulation \\
-        D5 & Envelope (walls, slabs, roofs, windows) & Increased infiltration (~60\%) \\
-        D6 & Window-to-wall ratio (WWR) & Variation 1 \\
-        D7 & Window-to-wall ratio (WWR) & Variation 2 \\
-        D8 & Window-to-wall ratio (WWR) & Variation 3 \\
-        D9 & Combined – Orientation, insulation, WWR & \\
-        \hline
-        \multicolumn{3}{|c|}{\textbf{Occupant Behavior and Control Improvements}} \\
-        \hline
-        B1 & Ventilation control & Open/close windows \\
-        B2 & Lighting use & Switch on/off lights \\
-        B3 & Electricity consumption & Turn off plug loads \\
-        B4 & Lighting use & Dim lights \\
-        B5 & HVAC & Turn on/off HVAC systems \\
-        B6 & Thermostat & Adjust thermostat settings \\
-        \hline
-        \multicolumn{3}{|c|}{
-          \begin{tabular}[c]{@{}c@{}}
-            \textbf{Energy savings:} \\
-            Equipment = 11.5--17.3\% \\
-            Design and Construction = 5.9--9.1\% \\
-            Occupant Behavior and Control and Operation = 15--20\%
-          \end{tabular}
-        } \\
-        \hline
-        \end{tabularx}
-        \end{table}
+\begin{table}[h]
+  \centering
+  \caption{Summary of Energy Efficiency Improvement Cases Across All Categories}
+  \label{tab:all-cases}
+  \begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+  \hline
+  \textbf{Case} & \textbf{Improvements} & \textbf{Adjustments} \\
+  \hline
+  \multicolumn{3}{|c|}{\textbf{Equipment Efficiency Improvements}} \\
+  \hline
+  E1 & HVAC – Cooling & +20\% \\
+  E2 & HVAC – Heating & +12\% \\
+  E3 & HVAC – Cases E1 and E2 & +20\%, +12\% \\
+  E4 & Lighting – Power density (LPD) & -15\% \\
+  E5 & Lighting – Power density (LPD) & -21\% \\
+  E6 & Equipment – Power density (EPD) & -10\% \\
+  E7 & Equipment – Power density (EPD) & -20\% \\
+  E8 & Combined – Cases E1–E7 & \\
+  E9 & Case E8 + Heat Pump for space heating & \\
+  \hline
+  \multicolumn{3}{|c|}{\textbf{Design and Construction Improvements}} \\
+  \hline
+  D1 & Orientation & East (90° rotation) \\
+  D2 & Orientation & South (180° rotation) \\
+  D3 & Orientation & West (270° rotation) \\
+  D4 & Envelope (walls, slabs, roofs, windows) & High insulation \\
+  D5 & Envelope (walls, slabs, roofs, windows) & Increased infiltration (~60\%) \\
+  D6 & Window-to-wall ratio (WWR) & Variation 1 \\
+  D7 & Window-to-wall ratio (WWR) & Variation 2 \\
+  D8 & Window-to-wall ratio (WWR) & Variation 3 \\
+  D9 & Combined – Orientation, insulation, WWR & \\
+  \hline
+  \multicolumn{3}{|c|}{\textbf{Occupant Behavior and Control Improvements}} \\
+  \hline
+  B1 & Ventilation control & Open/close windows \\
+  B2 & Lighting use & Switch on/off lights \\
+  B3 & Electricity consumption & Turn off plug loads \\
+  B4 & Lighting use & Dim lights \\
+  B5 & HVAC & Turn on/off HVAC systems \\
+  B6 & Thermostat & Adjust thermostat settings \\
+  \hline
+  \multicolumn{3}{|c|}{
+    \begin{tabular}[c]{@{}c@{}}
+      \textbf{Energy savings:} \\
+      Equipment = 11.5--17.3\% \\
+      Design and Construction = 5.9--9.1\% \\
+      Occupant Behavior and Control and Operation = 15--20\%
+    \end{tabular}
+  } \\
+  \hline
+  \end{tabularx}
+\end{table}
 
         
 \begin{figure}[h]
